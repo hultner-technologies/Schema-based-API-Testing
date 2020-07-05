@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "code"
+name = "talk_code"
 version = "0.1.0"
 description = ""
 authors = ["Alexander Hultnér <ahultner@gmail.com>"]
@@ -7,6 +7,9 @@ authors = ["Alexander Hultnér <ahultner@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 jupyterlab = "^2.1.5"
+flask-restx = "^0.2.0"
+gunicorn = "^20.0.4"
+schemathesis = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4"
