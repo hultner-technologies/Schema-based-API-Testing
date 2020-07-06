@@ -24,17 +24,57 @@ The talk will show how formal schemas for APIs can and will continue to provide 
 
 ## ⠠⠵ Quick reference
 
+### CLI
+```shell
+$ schemathesis run http://127.0.0.1:5000/swagger.json
+    
+================== Schemathesis test session starts ==================
+platform …
+rootdir: /~/dev/hultner_technologies/Schema-based-API-Testing/code
+hypothesis profile 'default' -> database=Directory…
+Schema location: http://127.0.0.1:5000/swagger.json
+Base URL: http://127.0.0.1:5000/
+Specification version: Swagger 2.0
+Workers: 1
+collected endpoints: 5
+
+GET /todos/ .                                                  [ 20%]
+POST /todos/ .                                                 [ 40%]
+DELETE /todos/{id} .                                           [ 60%]
+GET /todos/{id} .                                              [ 80%]
+PUT /todos/{id} .                                              [100%]
+
+============================== SUMMARY ===============================
+
+Performed checks:
+    not_a_server_error                    500 / 500 passed          PASSED
+
+========================= 5 passed in 5.32s ==========================
+```
+### Via pytest
 ```python
 # Minimal usage example
-def x(): ...
+import requests
+import schemathesis
 
+schema = schemathesis.from_uri("http://0.0.0.0:8080/swagger.json")
+
+@schema.parametrize()
+def test_no_server_errors(case):
+    # `requests` will make an appropriate call under the hood
+    response = case.call()  # use `call_wsgi` if you used `schemathesis.from_wsgi`
+    # You could use built-in checks
+    case.validate_response(response)
+    # Or assert the response manually
+    assert response.status_code < 500
 ```
 
 ## Talks
 ### ⠠⠵ FlaskCon, 2020 July 5
 - Type: Talk (20 mins)
 - [Schedule](https://flaskcon.com/#schedule_section)
-…
+- Video: TBA
+- [Slides](https://slides.com/hultner/flaskcon2020)
 
 ### ⠠⠵ EuroPython, 2020 July 23
 - Type: Talk (30 mins)
@@ -47,16 +87,17 @@ def x(): ...
 
 ## ⠠⠵ FAQ, pydantic
 **Stateful testing?**  
-Yes
+[Yes](https://schemathesis.readthedocs.io/en/stable/stateful.html), using links.
 
 **GraphQL?**  
-In-progress, …
+[In-progress](https://schemathesis.readthedocs.io/en/stable/graphql.html), check link for latest progress.
 
 **OpenAPI, Swagger?**  
-Yes
+Yes, Schemathesis supports both the older Swagger 2.0 standard and the newer OpenAPI 3 standard
 
 **Incompabilities?**
-Fixups…
+Can be addressed using [fixups](https://schemathesis.readthedocs.io/en/stable/compatibility.html?highlight=fixup), a built in fixup for FastAPI is included.  
+Activate in CLI with: `--fixups=all`
 
 **I have a question not covered here, where can I ask it?**  
 I'm [@ahultner on twitter](https://twitter.com/ahultner), otherwise you can also email me (address in slides).
@@ -64,7 +105,7 @@ I'm [@ahultner on twitter](https://twitter.com/ahultner), otherwise you can also
 ## ⠠⠵ Links
 - Schemathesis
 - Hypothesis, Talk, Course, Docs
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/), [RESTPlus](https://flask-restplus.readthedocs.io/en/stable/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/), [RestX]()[RESTPlus](https://flask-restplus.readthedocs.io/en/stable/)
 - [FastAPI](https://fastapi.tiangolo.com)
-- QuickREST Paper
+- [QuickREST Paper](https://arxiv.org/abs/1912.09686)
 
