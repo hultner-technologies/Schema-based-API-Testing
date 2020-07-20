@@ -105,7 +105,7 @@ I'm [@ahultner on twitter](https://twitter.com/ahultner), otherwise you can also
 ## ⠠⠵ Links
 - Schemathesis
 - Hypothesis, Talk, Course, Docs
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/), [RestX](https://github.com/python-restx/flask-restx)[RESTPlus](https://flask-restplus.readthedocs.io/en/stable/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/), [RestX](https://github.com/python-restx/flask-restx) [RESTPlus](https://flask-restplus.readthedocs.io/en/stable/)
 - [FastAPI](https://fastapi.tiangolo.com)
 - [QuickREST Paper](https://arxiv.org/abs/1912.09686)
 
