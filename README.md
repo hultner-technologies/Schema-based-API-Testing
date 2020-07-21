@@ -99,12 +99,15 @@ Yes, Schemathesis supports both the older Swagger 2.0 standard and the newer Ope
 Can be addressed using [fixups](https://schemathesis.readthedocs.io/en/stable/compatibility.html?highlight=fixup), a built in fixup for FastAPI is included.  
 Activate in CLI with: `--fixups=all`
 
+**Do you have to use the network?**
+No, Schemathesis can import your app directly and hit it without using the network if you use either WSGI or ASGI.
+
 **I have a question not covered here, where can I ask it?**  
 I'm [@ahultner on twitter](https://twitter.com/ahultner), otherwise you can also email me (address in slides).
 
 ## ⠠⠵ Links
-- Schemathesis
-- Hypothesis, Talk, Course, Docs
+- [Schemathesis](https://github.com/kiwicom/schemathesis)
+- [Hypothesis](https://hypothesis.works/), [Talk](https://github.com/Hultner/Test-faster-fix-more), [Course pre-signup](https://docs.google.com/forms/d/e/1FAIpQLScc_W47WklNw-3Z-a2s3wqM5dJQ-Vj8HUPzFBBpf38Q49w45Q/viewform), [Docs](https://hypothesis.readthedocs.io/en/latest/)
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/), [RestX](https://github.com/python-restx/flask-restx) [RESTPlus](https://flask-restplus.readthedocs.io/en/stable/)
 - [FastAPI](https://fastapi.tiangolo.com)
 - [QuickREST Paper](https://arxiv.org/abs/1912.09686)
