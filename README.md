@@ -73,7 +73,7 @@ def test_no_server_errors(case):
 ### ⠠⠵ FlaskCon, 2020 July 5
 - Type: Talk (20 mins)
 - [Schedule](https://flaskcon.com/#schedule_section)
-- Video: TBA
+- Video: [Automatically generate test-cases – Schema-based API testing - Alexander Hultnér 📯 - YouTube](https://www.youtube.com/watch?v=1lo7idI7uq8)  
 - [Slides](https://slides.com/hultner/flaskcon2020)
 
 ### ⠠⠵ EuroPython, 2020 July 23
