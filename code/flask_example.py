@@ -1,9 +1,15 @@
-from flask import Flask
+from flask import Flask, request
 from flask_restx import Api, Resource, fields
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 app = Flask(__name__)
 app.wsgi_app = ProxyFix(app.wsgi_app)
+
+@app.before_request
+def log_request():
+    app.logger.debug(f"Body: {request.get_data()}")
+
+
 api = Api(app, version="1.0", title="TodoMVC API", description="A simple TodoMVC API",)
 
 ns = api.namespace("todos", description="TODO operations")
@@ -23,6 +29,9 @@ class TodoDAO(object):
         self.todos = []
 
     def get(self, id):
+        # Activate some proprietary businesslogic
+        # inverse_id = 1/id
+
         for todo in self.todos:
             if todo["id"] == id:
                 return todo

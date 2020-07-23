@@ -1,4 +1,4 @@
-all : activate install test-http test-imported test-stateful run-server run-server-gunicorn
+all : activate install test-http test-imported test-stateful run-server run-server-gunicorn run-server-debug
 .PHONY : all
 
 activate: 
@@ -22,3 +22,6 @@ run-server:
 
 run-server-gunicorn:
 	poetry run gunicorn flask_example:app --bind 127.0.0.1:5000 --workers 17
+
+run-server-debug: 
+	poetry run gunicorn flask_example:app --bind 127.0.0.1:5000 --log-level debug
