@@ -83,9 +83,14 @@ def test_no_server_errors(case):
 - [Schedule](https://ep2020.europython.eu/schedule/23-july?selected=8XYc942-api-schema-based-testing-with-schemathesis)
 - [Details on europython.eu](https://ep2020.europython.eu/talks/8XYc942-api-schema-based-testing-with-schemathesis/)
 
+### ⠠⠵ PiterPy, 2020 August 4
+- Type: Talk (40 mins)
+- Python level: Intermediate
+- Domain level: Intermediate
+- [Schedule](https://piterpy.com/en/program)
 
 
-## ⠠⠵ FAQ, pydantic
+## ⠠⠵ FAQ, Schemathesis
 **Stateful testing?**  
 [Yes](https://schemathesis.readthedocs.io/en/stable/stateful.html), using links.
 
