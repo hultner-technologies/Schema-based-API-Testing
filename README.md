@@ -15,7 +15,7 @@ The talk will focus on a subset of the field of property-based testing where we 
 
 I will focus on the schemathesis library which leverages the strong hypothesis library as well as the hypothesis-JSONSchema extension strategies, and will in the future also support GraphQL via the hypothesis-graphql strategies. I’m a contributor to schemathesis and currently working on the future GraphQL support with schemathesis creator, Dmitry Dygalo.
 
-I will also compare it with its predecessor “swagger-conformance”, pure property-based testing through hypothesis, schema strategies with hypothesis-graphql and hypothesis-jsonschema, and discuss their advantages and disadvantages. I will also briefly talk about “QuickREST: Property-based Test Generation of OpenAPI-Described RESTful APIs” (https://arxiv.org/abs/1912.09686), the research paper that’s part of the inspiration for these tools.
+I will also compare it with its predecessor “swagger-conformance”, pure property-based testing through hypothesis, schema strategies with hypothesis-graphql and hypothesis-jsonschema, and discuss their advantages and disadvantages. I will also briefly talk about [“QuickREST: Property-based Test Generation of OpenAPI-Described RESTful APIs”](https://arxiv.org/abs/1912.09686), a research paper that’s inspired part of the functionality in these tools.
 
 By focusing on property-based test generation using schemas we already have, I will show that a field like property-based testing, which can seem quite daunting at first, actually can have a low barrier to entry while yielding large amounts of value in return and is useful for most common web projects today.
 
@@ -71,12 +71,13 @@ def test_no_server_errors(case):
 
 ## Talks
 ### ⠠⠵ FlaskCon, 2020 July 5
+- Video: [Automatically generate test-cases – Schema-based API testing - Alexander Hultnér 📯 - YouTube](https://www.youtube.com/watch?v=1lo7idI7uq8)  
 - Type: Talk (20 mins)
 - [Schedule](https://flaskcon.com/#schedule_section)
-- Video: [Automatically generate test-cases – Schema-based API testing - Alexander Hultnér 📯 - YouTube](https://www.youtube.com/watch?v=1lo7idI7uq8)  
 - [Slides](https://slides.com/hultner/flaskcon2020)
 
 ### ⠠⠵ EuroPython, 2020 July 23
+- Video: [Alexander Hultnér - API-schema-based testing with schemathesis](https://www.youtube.com/watch?v=9FHRwrv-xuQ)
 - Type: Talk (30 mins)
 - Python level: Intermediate
 - Domain level: Intermediate
@@ -112,8 +113,12 @@ I'm [@ahultner on twitter](https://twitter.com/ahultner), otherwise you can also
 
 ## ⠠⠵ Links
 - [Schemathesis](https://github.com/kiwicom/schemathesis)
-- [Hypothesis](https://hypothesis.works/), [Talk](https://github.com/Hultner/Test-faster-fix-more), [Course pre-signup](https://docs.google.com/forms/d/e/1FAIpQLScc_W47WklNw-3Z-a2s3wqM5dJQ-Vj8HUPzFBBpf38Q49w45Q/viewform), [Docs](https://hypothesis.readthedocs.io/en/latest/)
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/), [RestX](https://github.com/python-restx/flask-restx) [RESTPlus](https://flask-restplus.readthedocs.io/en/stable/)
+- [Hypothesis](https://hypothesis.works/)
+  - [Talk](https://github.com/Hultner/Test-faster-fix-more)
+  - [Course pre-signup](https://docs.google.com/forms/d/e/1FAIpQLScc_W47WklNw-3Z-a2s3wqM5dJQ-Vj8HUPzFBBpf38Q49w45Q/viewform)
+  - [Docs](https://hypothesis.readthedocs.io/en/latest/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+  - [RestX](https://github.com/python-restx/flask-restx) [RESTPlus](https://flask-restplus.readthedocs.io/en/stable/)
 - [FastAPI](https://fastapi.tiangolo.com)
 - [QuickREST Paper](https://arxiv.org/abs/1912.09686)
 
